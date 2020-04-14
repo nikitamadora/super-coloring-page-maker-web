@@ -23,8 +23,8 @@ const createCanvas = (e) => {
   for (let i = 0; i < numShapes; i++) {
     let shape = {
       id: i,
-      x: getRandomNum(-10, 500),
-      y: getRandomNum(-10, 500),
+      x: getRandomNum(-50, 500),
+      y: getRandomNum(-50, 500),
       h: getRandomNum(3, 250),
       w: getRandomNum(3, 250)
     }
