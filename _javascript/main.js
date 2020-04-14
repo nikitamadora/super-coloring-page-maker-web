@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //                    Canvas Logic
 // ----------------------------------------------------
 const canvasForm = document.querySelector('#canvas-form');
+const canvas = document.querySelector('#canvas');
 let numShapes = document.querySelector('#num-shapes');
 
 let getRandomNum = (min, max) => {
@@ -13,24 +14,27 @@ let getRandomNum = (min, max) => {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 };
-
+const canvasData = [];
 const createCanvas = (e) => {
   e.preventDefault();
   console.log('Creating shapes!');
-  const canvas = [];
+  // const canvas = [];
   numShapes = numShapes.value;
   for (let i = 0; i < numShapes; i++) {
     let shape = {
       id: i,
-      x: getRandomNum(0, 300),
-      y: getRandomNum(0, 300),
+      x: getRandomNum(-10, 500),
+      y: getRandomNum(-10, 500),
       h: getRandomNum(3, 250),
       w: getRandomNum(3, 250)
     }
-    // shape.id = i
-    console.log(shape);
+    canvasData.push(shape);
+    let domShape = document.createElement('div');
+    domShape.setAttribute('class', 'rect');
+    domShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x}px,${shape.y}px`);
+    canvas.appendChild(domShape);
   }
-  console.log(canvas);
+  console.log(canvasData);
 };
 
 // -------------------------------------- Event Listeners
