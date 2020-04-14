@@ -21,17 +21,13 @@ const createCanvas = (e) => {
   numShapes = numShapes.value;
   for (let i = 0; i < numShapes; i++) {
     let shape = {
-      id: 0,
-      x: 0,
-      y: 0,
-      h: 0,
-      w: 0
+      id: i,
+      x: getRandomNum(0, 300),
+      y: getRandomNum(0, 300),
+      h: getRandomNum(3, 250),
+      w: getRandomNum(3, 250)
     }
-    shape.id = i;
-    shape.x = getRandomNum(0, 300);
-    shape.y = getRandomNum(0, 300);
-    shape.h = getRandomNum(3, 250);
-    shape.w = getRandomNum(3, 250);
+    // shape.id = i
     console.log(shape);
   }
   console.log(canvas);
