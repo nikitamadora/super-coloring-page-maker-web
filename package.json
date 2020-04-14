@@ -2,9 +2,11 @@
   "name": "super-coloring-page-maker-web",
   "version": "1.0.0",
   "description": "The Front-End for a Delightful Coloring Page Maker App!",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
-    "bulma": "^0.8.2"
+    "body-parser": "^1.19.0",
+    "bulma": "^0.8.2",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.6",
@@ -16,14 +18,15 @@
     "postcss-cli": "^7.1.0"
   },
   "scripts": {
-    "css-build": "node-sass _sass/main.scss css/main.css",
+    "css-build": "node-sass _sass/main.scss dist/css/main.css",
     "css-deploy": "npm run css-build && npm run css-postcss",
-    "css-postcss": "postcss --use autoprefixer --output css/main.css css/main.css",
+    "css-postcss": "postcss --use autoprefixer --output dist/css/main.css dist/css/main.css",
     "css-watch": "npm run css-build -- --watch",
     "deploy": "npm run css-deploy && npm run js-build",
-    "js-build": "babel _javascript --out-dir lib",
+    "js-build": "babel _javascript --out-dir dist/lib",
     "js-watch": "npm run js-build -- --watch",
-    "start": "npm-run-all --parallel css-watch js-watch"
+    "start": "npm-run-all --parallel css-watch js-watch start-server",
+    "start-server": "nodemon ./server.js --exec babel-node -e js"
   },
   "repository": {
     "type": "git",
