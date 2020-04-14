@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Hello Developer! Check out my GitHub, and feel free to play!');
+  console.log('Hello Developer! Check out my GitHub, and feel free to play around!');
 });
 
 // ----------------------------------------------------
 //                    Canvas Logic
 // ----------------------------------------------------
 const canvasForm = document.querySelector('#canvas-form');
-const canvas = document.querySelector('#canvas');
+const canvas = document.querySelector('.canvas');
 let numShapes = document.querySelector('#num-shapes');
 
 let getRandomNum = (min, max) => {
