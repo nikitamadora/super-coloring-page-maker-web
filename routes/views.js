@@ -14,4 +14,10 @@ router.get('/gallery', (req, res) => {
   });
 });
 
+router.get('/view', (req, res) => {
+  res.sendFile('/views/view.html', {
+    root: __dirname + '/../'
+  });
+});
+
 export default router;

@@ -41,9 +41,6 @@ const createCanvas = (e) => {
 canvasForm.addEventListener('submit', createCanvas);
 
 
-
-
-
 // ------------------------------------------------- API Requests
 
 // const recreateButton = document.querySelector("#recreate-btn");
