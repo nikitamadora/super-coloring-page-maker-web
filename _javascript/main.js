@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ----------------------------------------------------
 //                    Canvas Logic
 // ----------------------------------------------------
-const canvasForm = document.querySelector('#canvas-form');
+
 const canvas = document.querySelector('.canvas');
 let numShapes = document.querySelector('#num-shapes');
 
@@ -37,8 +37,36 @@ const createCanvas = (e) => {
   console.log(canvasData);
 };
 
-// -------------------------------------- Event Listeners
+// ----------------------------------------------------- Buttons
+const canvasForm = document.querySelector('#canvas-form');
 canvasForm.addEventListener('submit', createCanvas);
+
+// ------------------------------------- Add to Collection
+
+const addToCollection = () => {
+  console.log('Button Clicked!');
+  let exportableString = JSON.stringify(canvasData);
+
+  let exportableData = new URLSearchParams();
+  exportableData.append("canvasData", `${exportableString}`);
+
+  let postOptions = {
+    method: 'POST',
+    body: exportableData,
+    redirect: 'follow'
+  };
+
+  fetch("http://localhost:4000/api/v1/artboard", postOptions)
+    .then(response => response.json())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+};
+
+
+const collectionButton = document.querySelector('#collection-btn');
+collectionButton.addEventListener('click', addToCollection);
+
+
 
 
 // ------------------------------------------------- API Requests
@@ -46,10 +74,10 @@ canvasForm.addEventListener('submit', createCanvas);
 // const recreateButton = document.querySelector("#recreate-btn");
 const endpoint = 'http://localhost:4000/api/v1/artboard'
 
-const requestOptions = {
-  method: 'GET',
-  redirect: 'follow'
-};
+// const requestOptions = {
+//   method: 'GET',
+//   redirect: 'follow'
+// };
 
 // Fetches all artboard data
 // recreateButton.addEventListener('click', () => {
