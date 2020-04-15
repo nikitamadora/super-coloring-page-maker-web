@@ -28,10 +28,9 @@ $primary-invert: $pink-invert;
 
 @import "../node_modules/bulma/bulma";
 
-.placeholder-logo {
-  background-color: pink;
-  height: 5rem;
-  max-width: 15em;
+.container {
+  margin: 0 auto;
+  max-width: 960px;
 }
 
 .bg-test-1 {
@@ -57,6 +56,7 @@ $primary-invert: $pink-invert;
   width: 450px;
   height: 500px;
   padding: 10px;
+  margin: 0 auto;
   box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
