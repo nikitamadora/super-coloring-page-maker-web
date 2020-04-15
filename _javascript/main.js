@@ -60,6 +60,8 @@ const addToCollection = () => {
     .then(response => response.json())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
+  // TODO Convert to a modal with an escape 'x'
+  console.log('Thanks for your submission!');
 };
 
 

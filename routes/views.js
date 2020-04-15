@@ -14,7 +14,7 @@ router.get('/gallery', (req, res) => {
   });
 });
 
-router.get('/view', (req, res) => {
+router.get('/view/:id', (req, res) => {
   res.sendFile('/views/view.html', {
     root: __dirname + '/../'
   });
