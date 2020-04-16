@@ -16,7 +16,7 @@ let getRandomNum = (min, max) => {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 };
-const canvasData = [];
+let canvasData = [];
 const createCanvas = (e) => {
   e.preventDefault();
   let numShapes = numShapesEl.value;
@@ -40,13 +40,14 @@ const createCanvas = (e) => {
 
 canvasForm.addEventListener('submit', createCanvas);
 
-// -------------------------------- Clear Canvas
+// ------------------------------------------- Clear Canvas
 // Add click listener to clear button
 // On click, set the inner html of .canvas to ''
 const clearButton = document.querySelector('#clear-button');
 
 const clearCanvas = () => {
   canvas.innerHTML = '';
+  canvasData = [];
 };
 
 clearButton.addEventListener('click', clearCanvas);
