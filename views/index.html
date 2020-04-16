@@ -14,8 +14,8 @@
         <img class='logo' src='images/super-heckin-logo.png'>
       </a>
       <div class='container column'>
-        <button class='is-primary button'>Gallery</button>
-        <button class='is-info button'>About</button>
+        <a href='/gallery' class='is-primary button'>Gallery</a>
+        <a href='/about' class='is-info button'>About</a>
       </div>
     </section>
 
@@ -24,13 +24,13 @@
         <div class='column'>
           <h2>Canvas</h2>
           <div class='canvas'></div>
-          <button id='clear-button' class='button is-warning'>Clear</button>
+          <button id='clear-button' class='button is-danger is-outlined'>Clear</button>
         </div>
 
         <div id='controls-container' class='column'>
           <h2>Controls</h2>
           <form id='canvas-form'>
-            <h5>How many shapes would you like? (max 250)</h5>
+            <h5>How many shapes would you like?</h5>
             <input id='num-shapes' type='number' name='numShapes' max='10000' value='100'>
             <button id='create-btn' class='button is-primary' type='submit'>Create!</button>
           </form>

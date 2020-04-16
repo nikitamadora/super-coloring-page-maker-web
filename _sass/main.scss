@@ -33,29 +33,37 @@ $primary-invert: $pink-invert;
   max-width: 960px;
 }
 
-.bg-test-1 {
-  background-color: rgb(232, 203, 128);
-}
-
-.bg-test-2 {
-  background-color: rgb(222, 102, 124);
-}
-
-.bg-test-3 {
-  background-color: rgb(222, 148, 102);
-}
-
 .logo {
   max-width: 25%;
   height: auto;
 }
 
+@media print {
+  .logo, .button, 
+  input, h1, h2, h3, h4, h5, h6 {
+    display: none;
+  }
+
+  .canvas {
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  #controls-container {
+    display: none;
+  }
+}
+
 .canvas {
   position: relative;
   overflow: hidden;
-  width: 450px;
-  height: 500px;
-  padding: 10px;
+  // border: 1px solid black;
+  width: 625px;
+  height: 750px;
   margin: 0 auto;
   box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -66,6 +74,13 @@ $primary-invert: $pink-invert;
 
 .rect {
   border: 1px solid black;
-  // border-radius: 50%;
   position: absolute;
 }
+
+.circle {
+  border: 1px solid black;
+  position: absolute;
+  // border-radius: 5%;
+
+}
+

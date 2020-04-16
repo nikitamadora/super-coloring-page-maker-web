@@ -14,6 +14,12 @@ router.get('/gallery', (req, res) => {
   });
 });
 
+router.get('/about', (req, res) => {
+  res.sendFile('/views/about.html', {
+    root: __dirname + '/../'
+  });
+});
+
 router.get('/view/:id', (req, res) => {
   res.sendFile('/views/view.html', {
     root: __dirname + '/../'

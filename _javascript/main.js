@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // ----------------------------------------------------
 
 const canvas = document.querySelector('.canvas');
-let numShapes = document.querySelector('#num-shapes');
+const canvasForm = document.querySelector('#canvas-form');
+let numShapesEl = document.querySelector('#num-shapes');
 
 let getRandomNum = (min, max) => {
   min = Math.ceil(min);
@@ -17,9 +18,7 @@ let getRandomNum = (min, max) => {
 const canvasData = [];
 const createCanvas = (e) => {
   e.preventDefault();
-  console.log('Creating shapes!');
-  // const canvas = [];
-  numShapes = numShapes.value;
+  let numShapes = numShapesEl.value;
   for (let i = 0; i < numShapes; i++) {
     let shape = {
       id: i,
@@ -28,20 +27,38 @@ const createCanvas = (e) => {
       h: getRandomNum(3, 250),
       w: getRandomNum(3, 250)
     }
+    // Adds `shape` object to array for both rendering shapes in canvas now, and exporting to db for later retrieval
     canvasData.push(shape);
+
     let domShape = document.createElement('div');
     domShape.setAttribute('class', 'rect');
-    domShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x}px,${shape.y}px`);
+    domShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x}px,${shape.y}px)`);
     canvas.appendChild(domShape);
-  }
-  console.log(canvasData);
+  };
 };
 
-// ----------------------------------------------------- Buttons
-const canvasForm = document.querySelector('#canvas-form');
 canvasForm.addEventListener('submit', createCanvas);
 
-// ------------------------------------- Add to Collection
+// -------------------------------- Clear Canvas
+// Add click listener to clear button
+// On click, set the inner html of .canvas to ''
+const clearButton = document.querySelector('#clear-button');
+
+const clearCanvas = () => {
+  canvas.innerHTML = '';
+};
+
+clearButton.addEventListener('click', clearCanvas);
+
+
+// --------------------------------
+//             Buttons
+// --------------------------------
+
+// --------------------------------------------- Add to Collection
+
+const collectionButton = document.querySelector('#collection-btn');
+collectionButton.addEventListener('click', addToCollection);
 
 const addToCollection = () => {
   console.log('Button Clicked!');
@@ -61,31 +78,7 @@ const addToCollection = () => {
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
   // TODO Convert to a modal with an escape 'x'
-  console.log('Thanks for your submission!');
+  console.log('hello');
 };
 
-
-const collectionButton = document.querySelector('#collection-btn');
-collectionButton.addEventListener('click', addToCollection);
-
-
-
-
-// ------------------------------------------------- API Requests
-
-// const recreateButton = document.querySelector("#recreate-btn");
-const endpoint = 'http://localhost:4000/api/v1/artboard'
-
-// const requestOptions = {
-//   method: 'GET',
-//   redirect: 'follow'
-// };
-
-// Fetches all artboard data
-// recreateButton.addEventListener('click', () => {
-//   fetch("http://localhost:4000/api/v1/artboard", requestOptions)
-//     .then(response => response.json())
-//     .then(result => console.log(result))
-//     .catch(error => console.log('error', error));
-// });
 
