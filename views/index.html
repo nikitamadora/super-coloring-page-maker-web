@@ -21,14 +21,16 @@
 
     <section class='container'>
       <div class='columns'>
-        <div class='column'>
-          <h2>Canvas</h2>
-          <div class='canvas'></div>
+        <div class='column has-text-centered'>
+          <h2 class='title'>Canvas</h2>
+          <div class='canvas' id='main-canvas'>
+            <!-- Wonderful Shapes Render Here! -->
+          </div>
           <button id='clear-button' class='button is-danger is-outlined'>Clear</button>
         </div>
 
-        <div id='controls-container' class='column'>
-          <h2>Controls</h2>
+        <div id='controls-container' class='column has-text-centered'>
+          <h4 class='title is-4'>Controls</h4>
           <form id='canvas-form'>
             <h5>How many shapes would you like?</h5>
             <input id='num-shapes' type='number' name='numShapes' max='10000' value='100'>
