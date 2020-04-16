@@ -55,11 +55,13 @@ clearButton.addEventListener('click', clearCanvas);
 // --------------------------------
 //             Buttons
 // --------------------------------
+// --------------------------------------- Print / Screenshot View
+const printButton = document.querySelector('#print-btn');
 
 // --------------------------------------------- Add to Collection
 
 const collectionButton = document.querySelector('#collection-btn');
-collectionButton.addEventListener('click', addToCollection);
+console.log(collectionButton);
 
 const addToCollection = () => {
   console.log('Button Clicked!');
@@ -81,5 +83,7 @@ const addToCollection = () => {
   // TODO Convert to a modal with an escape 'x'
   console.log('hello');
 };
+
+collectionButton.addEventListener('click', addToCollection);
 
 
