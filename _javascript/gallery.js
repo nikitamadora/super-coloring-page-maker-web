@@ -29,11 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
           h: artworkData[i].h,
           w: artworkData[i].w
         }
-        console.log(shape.x/3)
         // TODO add math to reduce values of x, y, h, and w by /3
         let artworkShape = document.createElement('div');
         artworkShape.setAttribute('class', 'rect');
-        artworkShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x}px,${shape.y}px)`);
+        artworkShape.setAttribute('style', `width:${shape.w/3}px; height:${shape.h/3}px; transform: translate(${shape.x/3}px,${shape.y/3}px)`);
         galleryItem.appendChild(artworkShape);
       }
       
