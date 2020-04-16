@@ -61,27 +61,29 @@ const printButton = document.querySelector('#print-btn');
 // --------------------------------------------- Add to Collection
 
 const collectionButton = document.querySelector('#collection-btn');
-console.log(collectionButton);
 
 const addToCollection = () => {
-  console.log('Button Clicked!');
-  let exportableString = JSON.stringify(canvasData);
+  let canvasContents = document.querySelector('#main-canvas').children;
+  if (canvasContents.length > 0) {
+    let exportableString = JSON.stringify(canvasData);
 
-  let exportableData = new URLSearchParams();
-  exportableData.append("canvasData", `${exportableString}`);
+    let exportableData = new URLSearchParams();
+    exportableData.append("canvasData", `${exportableString}`);
 
-  let postOptions = {
-    method: 'POST',
-    body: exportableData,
-    redirect: 'follow'
-  };
+    let postOptions = {
+      method: 'POST',
+      body: exportableData,
+      redirect: 'follow'
+    };
 
-  fetch("http://localhost:4000/api/v1/artboard", postOptions)
-    .then(response => response.json())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-  // TODO Convert to a modal with an escape 'x'
-  console.log('hello');
+    fetch("http://localhost:4000/api/v1/artboard", postOptions)
+      .then(response => response.json())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+    // TODO Convert to a modal with an escape 'x'
+  } else {
+    alert('Sorry! As subjectively lovely as a blank canvas is, you may not submit one to the collection.');
+  }
 };
 
 collectionButton.addEventListener('click', addToCollection);
