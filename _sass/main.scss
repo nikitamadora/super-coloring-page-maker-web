@@ -75,8 +75,6 @@ $primary-invert: $pink-invert;
     0 12.5px 10px rgba(0, 0, 0, 0.06)
 }
 
-// 156.25 width
-// 187.5 height
 .rect {
   border: 1px solid black;
   position: absolute;
@@ -96,6 +94,8 @@ $primary-invert: $pink-invert;
   width: 206.25px;
   display: inline-block;
   margin: 1.25rem;
+  overflow: hidden;
+  position: relative;
   box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),

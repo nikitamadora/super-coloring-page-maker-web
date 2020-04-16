@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then((stream) => stream.json())
       .then(res => recreateCanvas(res))
       .catch(error => console.log('error', error));
-  }
+  };
 
   fetchData();
 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
       let domShape = document.createElement('div');
       domShape.setAttribute('class', 'rect');
-      domShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x}px,${shape.y}px`);
+      domShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x}px,${shape.y}px)`);
       canvas.appendChild(domShape);
     }
   };
