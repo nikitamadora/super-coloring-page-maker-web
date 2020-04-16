@@ -21,7 +21,7 @@ router.get('/about', (req, res) => {
 });
 
 router.get('/view/:id', (req, res) => {
-  res.sendFile('/views/view.html', {
+  res.sendFile('/views/printView.html', {
     root: __dirname + '/../'
   });
 });

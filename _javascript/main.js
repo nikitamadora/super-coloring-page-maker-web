@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const canvas = document.querySelector('.canvas');
 const canvasForm = document.querySelector('#canvas-form');
 let numShapesEl = document.querySelector('#num-shapes');
+let userShapeChoice = 'rect';
 
 let getRandomNum = (min, max) => {
   min = Math.ceil(min);
@@ -22,8 +23,8 @@ const createCanvas = (e) => {
   for (let i = 0; i < numShapes; i++) {
     let shape = {
       id: i,
-      x: getRandomNum(-50, 500),
-      y: getRandomNum(-50, 500),
+      x: getRandomNum(-100, 600),
+      y: getRandomNum(-100, 750),
       h: getRandomNum(3, 250),
       w: getRandomNum(3, 250)
     }
@@ -31,7 +32,7 @@ const createCanvas = (e) => {
     canvasData.push(shape);
 
     let domShape = document.createElement('div');
-    domShape.setAttribute('class', 'rect');
+    domShape.setAttribute('class', `${userShapeChoice}`);
     domShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x}px,${shape.y}px)`);
     canvas.appendChild(domShape);
   };
