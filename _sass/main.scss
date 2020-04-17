@@ -35,7 +35,7 @@ $primary-invert: $pink-invert;
 }
 
 .logo {
-  max-width: 100%;
+  max-width: 25%;
   height: auto;
 }
 
@@ -47,7 +47,7 @@ $primary-invert: $pink-invert;
 
   .canvas {
     box-shadow: none !important;
-    border: 1px solid #000 !important;
+    border: 2px solid #000 !important;
     margin: 0 auto;
     display: block;
     width: 100%;
@@ -84,7 +84,6 @@ $primary-invert: $pink-invert;
   border: 1px solid black;
   position: absolute;
   // border-radius: 5%;
-
 }
 
 // ------------------------------------ GALLERY
@@ -102,6 +101,7 @@ $primary-invert: $pink-invert;
     0 -2.5px 10px rgba(0, 0, 0, 0.06),
     0 12.5px 10px rgba(0, 0, 0, 0.06)
 }
+
 
 #gal-01 {
   background-color: rgb(224, 70, 131);
@@ -123,4 +123,46 @@ $primary-invert: $pink-invert;
 }
 #gal-07 {
   background-color: purple;
+}
+
+// ----------------------------- ANIMATIONS
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
 }
