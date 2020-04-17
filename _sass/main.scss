@@ -125,44 +125,43 @@ $primary-invert: $pink-invert;
   background-color: purple;
 }
 
-// ----------------------------- ANIMATIONS
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+// ---------------------------------POPOP MODALS
+// -- Original created by @catcarbn ♡
+// -- https://catcarbonell.github.io/popop/
 
-@-webkit-keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
+/* === MODAL === */
+.popop-modal {
+  visibility: hidden;
+  flex-direction: column;
+  opacity: 0;
+  z-index: 999;
+  width: 50%;
+  height: 75%;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 7px 7px rgba(54,54,54, 0.5);
+  position: absolute;
+  margin: auto;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  transition: 0.2s ease-in-out all;
 }
-
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
+.popop-content{
+  overflow: auto;
+  height: 90%;
+  padding: 10px
 }
-
-.pulse {
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
+.popop-fixed {
+  position: fixed;
+  height: 30px;
+  padding-top: 10px;
+}
+/* === VISIBILITY === */
+.popop-show{
+ visibility: visible;
+ opacity: 1;
 }
