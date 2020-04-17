@@ -15,8 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // galleryData is array from GET req
     galleryData.forEach(galleryObj => {
       // create div element for gallery
-      let galleryItem = document.createElement('div');
+      let galleryItem = document.createElement('a');
+      let artworkID = galleryObj._id;
+      console.log(artworkID);
       galleryItem.setAttribute('class', 'gallery-item');
+      galleryItem.setAttribute('href', `/view/${artworkID}`);
 
       // create shapes for the artwork
       let artworkData = JSON.parse(galleryObj.canvasData); 
