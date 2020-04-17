@@ -1,7 +1,6 @@
 import express from 'express';
 const router = express.Router();
 
-// Homepage & Canvas View
 router.get('/', (req, res) => {
   res.sendFile('/views/index.html', {
     root: __dirname + '/../'
