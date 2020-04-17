@@ -6,7 +6,7 @@
       <meta name='viewport' content='width=device-width, initial-scale=1'>
       <title>Super Coloring Page Maker!</title>
       <link rel='stylesheet' href='css/main.css'>
-      <script defer type='text/javascript' src='lib/main.js'></script>
+      <script defer type='text/javascript' src='lib/about.js'></script>
   </head>
   <body>
     <section class='section columns' id='header'>
@@ -22,7 +22,11 @@
     <section class='section' id='about-main'>
       <div class='container'>
         <div>
-          <h1 class='title is-2'>What is the Super Coloring Page Maker?</h1>
+          <span class='title is-2 button popop-open-btn' data-modal-id='modal-1'>What is the Super Coloring Page Maker?</span>
+          <div class='popop-modal' id='modal-1'>
+            <h1>Yay!</h1>
+            <button class='popop-close-btn'>Close!</button>
+          </div>
           <h2 class='subtitle'>Tl;dr: An interactive random coloring page generator!</h2>
 
           <h3 class='title is-3'>Intention</h3>
