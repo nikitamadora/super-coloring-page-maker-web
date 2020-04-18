@@ -6,28 +6,31 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Super Coloring Page Maker!</title>
     <link rel='stylesheet' href='/css/main.css'>
-    <script defer type='text/javascript' src='/lib/gallery.js'></script>
+    <script defer type='text/javascript' src='/lib/view.js'></script>
   </head>
   <body>
-
     <section class='section columns' id='header'>
       <a href='/'>
         <img class='logo' src='/images/super-heckin-logo.png'>
       </a>
       <div class='container column'>
-        <a href='/' class='is-danger button'>Make Your Own!</a>
+        <a href='/gallery' class='is-danger button'>Gallery</a>
         <a href='/about' class='is-primary button'>About</a>
       </div>
     </section>
 
-  <section class='section'>
-    <div class='container'>
-      <h2 class='title has-text-centered has-text-primary'>Community Creations</h2>
-      <div class='container has-text-centered' id='gallery-grid'>
-        <!-- Artwork Spawns Here! -->
+    <section class='container'>
+      <div class='columns'>
+        <div class='column has-text-centered'>
+          
+          <div class='canvas'>
+            <!-- Beautiful Artwork Renders Here! -->
+          </div>
+          
+          <a href='javascript:window.print();' class='button is-danger'>Print Me!</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   </body>
 </html>

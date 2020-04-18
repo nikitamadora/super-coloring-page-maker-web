@@ -10,33 +10,50 @@
   </head>
   <body>
     <section class='section columns' id='header'>
-        <!-- Logo - Convert to Image -->
-      <div class='placeholder-logo column'></div>
+      <a href='/'>
+        <img class='logo' src='images/super-heckin-logo.png'>
+      </a>
       <div class='container column'>
-        <button class='is-primary button'>Gallery</button>
-        <button class='is-info button'>About</button>
+        <a href='/gallery' class='is-primary button'>Gallery</a>
+        <a href='/about' class='is-info button'>About</a>
       </div>
     </section>
 
     <section class='container'>
       <div class='columns'>
-        <div class='column'>
-          <h2>Canvas</h2>
-          <div id='canvas' class='bg-test-2'></div>
-          <button id='clear-button' class='button is-warning'>Clear</button>
+        <div class='column has-text-centered'>
+          <h2 class='title'>Canvas</h2>
+          <div class='canvas' id='main-canvas'>
+            <!-- Wonderful Shapes Render Here! -->
+          </div>
+          <button id='clear-button' class='button is-danger is-outlined'>Clear</button>
         </div>
 
-        <div id='controls-container' class='column'>
-          <h2>Controls</h2>
-          <form id='canvas-form'>
-            <h5>How many shapes would you like? (max 250)</h5>
-            <input id='num-shapes' type='number' name='numShapes' max='250' value='25'>
-            <button id='create-btn' class='button is-primary' type='submit'>Create!</button>
-          </form>
-          <div class='container'>
-            <button id='collection-btn' class='button is-grey-dark'>Add to Collection!</button>
-            <button id='print-btn' class='button is-grey-light'>Print Me!</button>
-            <button id='export-btn' class='button is-grey-lighter'>Export Me!</button>
+        <div id="main-sidebar" class="column">
+
+          <div id='controls-container' class='has-text-centered'>
+            <h4 class='title is-4'>Controls</h4>
+            <form id='canvas-form'>
+              <h5>How many shapes would you like?</h5>
+              <input id='num-shapes' type='number' name='numShapes' max='10000' value='100'>
+              <button id='create-btn' class='button is-primary' type='submit'>Create!</button>
+            </form>
+            <div class='container'>
+              <button id='collection-btn' class='button is-grey-dark'>Add to Collection!</button>
+              <a href='javascript:window.print();' id='print-btn' class='button is-primary'>Print!</a>
+            </div>
+          </div>
+
+          <div class='gal-01' id="help-menu">
+            <h3 class='gal-02 title is-4'>Help</h3>
+            <div class='gal-06'>
+              <h5 class="gal-03 title is-5">How to Play</h5>
+              <p class='gal-04'>Instructions for how to play go here yay!</p>
+            </div>
+            <div class='gal-07'>
+              <h5 class="title is-5">How to Export</h5>
+              <p>It'll be nice to turn this into a modal or tooltip instead. Stretch goals yay!</p>
+            </div>
           </div>
         </div>
       </div>

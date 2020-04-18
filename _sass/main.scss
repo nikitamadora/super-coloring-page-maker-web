@@ -27,34 +27,123 @@ $primary-invert: $pink-invert;
 */
 
 @import "../node_modules/bulma/bulma";
+@import "./popop.scss";
 
-.placeholder-logo {
-  background-color: pink;
-  height: 5rem;
-  max-width: 15em;
+// ------------------------------------ GLOBAL
+.container {
+  margin: 0 auto;
+  max-width: 960px;
 }
 
-.bg-test-1 {
-  background-color: rgb(232, 203, 128);
+.logo {
+  max-width: 25%;
+  min-width: 200px;
+  height: auto;
 }
 
-.bg-test-2 {
-  background-color: rgb(222, 102, 124);
+@media print {
+  .logo, .button, 
+  #controls-container,
+  #help-menu,
+  input, h1, h2, h3, h4, h5, h6 {
+    display: none;
+  }
+
+  .canvas {
+    box-shadow: none !important;
+    border: 2px solid #000 !important;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  #controls-container {
+    display: none;
+  }
+  #gal-01 {
+  border: 1px solid red;
+}
+  .gal-02 {
+    border: 1px solid rgb(217, 224, 70);
+  }
+  .gal-03 {
+    border: 1px solid rgb(168, 224, 70);
+  }
+  .gal-04 {
+    border: 1px solid aquamarine;
+  }
+  .gal-05 {
+    border: 1px solid lightsteelblue;
+  }
+  .gal-06 {
+    border: 1px solid lightcoral;
+  }
+  .gal-07 {
+    border: 1px solid purple;
+  }
 }
 
-.bg-test-3 {
-  background-color: rgb(222, 148, 102);
-}
+// ------------------------------------ CANVAS
 
-
-#canvas {
+.canvas {
   position: relative;
   overflow: hidden;
-  width: 450px;
-  height: 500px;
+  // border: 1px solid black;
+  width: 625px;
+  height: 750px;
+  margin: 0 auto;
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 -2.5px 10px rgba(0, 0, 0, 0.06),
+    0 12.5px 10px rgba(0, 0, 0, 0.06)
 }
 
-.rect {
+.shape {
   border: 1px solid black;
   position: absolute;
+}
+
+.circle, .oval {
+  border-radius: 50%;
+}
+
+// ------------------------------------ GALLERY
+
+.gallery-item {
+  height: 247.5px;
+  width: 206.25px;
+  display: inline-block;
+  margin: 1.25rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 -2.5px 10px rgba(0, 0, 0, 0.06),
+    0 12.5px 10px rgba(0, 0, 0, 0.06)
+}
+
+
+#gal-01 {
+  border: rgb(224, 70, 131);
+}
+#gal-02 {
+  border: rgb(217, 224, 70);
+}
+#gal-03 {
+  border: rgb(168, 224, 70);
+}
+#gal-04 {
+  border: aquamarine;
+}
+#gal-05 {
+  border: lightsteelblue;
+}
+#gal-06 {
+  border: lightcoral;
+}
+#gal-07 {
+  border: purple;
 }
