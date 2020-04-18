@@ -30,6 +30,14 @@ $primary-invert: $pink-invert;
 @import "./popop.scss";
 
 // ------------------------------------ GLOBAL
+body {
+  background: rgb(255,0,140);
+  background: -moz-linear-gradient(211deg, rgba(255,0,140,1) 0%, rgba(255,194,139,1) 28%, rgba(209,255,129,1) 50%, rgba(46,255,223,1) 75%, rgba(113,136,255,1) 100%);
+  background: -webkit-linear-gradient(211deg, rgba(255,0,140,1) 0%, rgba(255,194,139,1) 28%, rgba(209,255,129,1) 50%, rgba(46,255,223,1) 75%, rgba(113,136,255,1) 100%);
+  background: linear-gradient(211deg, rgba(255,0,140,1) 0%, rgba(255,194,139,1) 28%, rgba(209,255,129,1) 50%, rgba(46,255,223,1) 75%, rgba(113,136,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff008c",endColorstr="#7188ff",GradientType=1);
+}
+
 .container {
   margin: 0 auto;
   max-width: 960px;
@@ -41,10 +49,19 @@ $primary-invert: $pink-invert;
   height: auto;
 }
 
+.canvas, .gallery-item {
+  background-color: #fff;
+}
+
+// ----------------------------- BULMA OVERWRITE
+.input {
+  max-width: 30%;
+}
+
+// -------------------------------- PRINT STYLES
 @media print {
   .logo, .button, 
-  #controls-container,
-  #help-menu,
+  #main-sidebar,
   input, h1, h2, h3, h4, h5, h6 {
     display: none;
   }
@@ -60,27 +77,6 @@ $primary-invert: $pink-invert;
 
   #controls-container {
     display: none;
-  }
-  #gal-01 {
-  border: 1px solid red;
-}
-  .gal-02 {
-    border: 1px solid rgb(217, 224, 70);
-  }
-  .gal-03 {
-    border: 1px solid rgb(168, 224, 70);
-  }
-  .gal-04 {
-    border: 1px solid aquamarine;
-  }
-  .gal-05 {
-    border: 1px solid lightsteelblue;
-  }
-  .gal-06 {
-    border: 1px solid lightcoral;
-  }
-  .gal-07 {
-    border: 1px solid purple;
   }
 }
 
@@ -109,6 +105,33 @@ $primary-invert: $pink-invert;
   border-radius: 50%;
 }
 
+// ----------------------------------- CONTROLS
+.ctrl-btn {
+  display: block;
+  min-width: 150px;
+  max-width: 250px;
+  width: 80%;
+  height: 70px;
+  line-height: 70px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px auto;
+  background-color: rgb(243, 57, 132);
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 500;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    cursor: pointer;
+    border: none;
+    background-color: pink;
+    color: #fff;
+  }
+}
+
 // ------------------------------------ GALLERY
 
 .gallery-item {
@@ -122,7 +145,8 @@ $primary-invert: $pink-invert;
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
     0 -2.5px 10px rgba(0, 0, 0, 0.06),
-    0 12.5px 10px rgba(0, 0, 0, 0.06)
+    0 12.5px 10px rgba(0, 0, 0, 0.06);
+  border: 2px solid black;
 }
 
 
