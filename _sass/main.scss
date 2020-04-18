@@ -30,13 +30,13 @@ $primary-invert: $pink-invert;
 @import "./popop.scss";
 
 // ------------------------------------ GLOBAL
-body {
-  background: rgb(255,0,140);
-  background: -moz-linear-gradient(211deg, rgba(255,0,140,1) 0%, rgba(255,194,139,1) 28%, rgba(209,255,129,1) 50%, rgba(46,255,223,1) 75%, rgba(113,136,255,1) 100%);
-  background: -webkit-linear-gradient(211deg, rgba(255,0,140,1) 0%, rgba(255,194,139,1) 28%, rgba(209,255,129,1) 50%, rgba(46,255,223,1) 75%, rgba(113,136,255,1) 100%);
-  background: linear-gradient(211deg, rgba(255,0,140,1) 0%, rgba(255,194,139,1) 28%, rgba(209,255,129,1) 50%, rgba(46,255,223,1) 75%, rgba(113,136,255,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff008c",endColorstr="#7188ff",GradientType=1);
-}
+// body {
+//   background: rgb(255,0,140);
+//   background: -moz-linear-gradient(211deg, rgba(255,0,140,1) 0%, rgba(255,194,139,1) 28%, rgba(209,255,129,1) 50%, rgba(46,255,223,1) 75%, rgba(113,136,255,1) 100%);
+//   background: -webkit-linear-gradient(211deg, rgba(255,0,140,1) 0%, rgba(255,194,139,1) 28%, rgba(209,255,129,1) 50%, rgba(46,255,223,1) 75%, rgba(113,136,255,1) 100%);
+//   background: linear-gradient(211deg, rgba(255,0,140,1) 0%, rgba(255,194,139,1) 28%, rgba(209,255,129,1) 50%, rgba(46,255,223,1) 75%, rgba(113,136,255,1) 100%);
+//   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff008c",endColorstr="#7188ff",GradientType=1);
+// }
 
 .container {
   margin: 0 auto;
@@ -121,14 +121,59 @@ body {
   color: #fff;
   font-size: 1.5em;
   font-weight: 500;
+  &#create-btn {
+    background: linear-gradient(38deg, #00dddf, #aae30090, #e300819f, #7d00e3);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 12s ease infinite;
+    -moz-animation: AnimationName 12s ease infinite;
+    animation: AnimationName 12s ease infinite;
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+  }
   &:focus {
     outline: none;
   }
   &:hover {
     cursor: pointer;
     border: none;
-    background-color: pink;
     color: #fff;
+    background: linear-gradient(217deg, #00ffd9, rgb(243, 57, 132));
+    background-size: 400% 400%;
+
+    -webkit-animation: PinktoGreen 4s ease infinite;
+    -moz-animation: hotPinkToAqua 4s ease infinite;
+    animation: hotPinkToAqua 4s ease infinite;
+
+    @-webkit-keyframes hotPinkToAqua {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes hotPinkToAqua {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes hotPinkToAqua {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
   }
 }
 
@@ -146,7 +191,7 @@ body {
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
     0 -2.5px 10px rgba(0, 0, 0, 0.06),
     0 12.5px 10px rgba(0, 0, 0, 0.06);
-  border: 2px solid black;
+  // border: 2px solid black;
 }
 
 
