@@ -29,16 +29,31 @@
           <button id='clear-button' class='button is-danger is-outlined'>Clear</button>
         </div>
 
-        <div id='controls-container' class='column has-text-centered'>
-          <h4 class='title is-4'>Controls</h4>
-          <form id='canvas-form'>
-            <h5>How many shapes would you like?</h5>
-            <input id='num-shapes' type='number' name='numShapes' max='10000' value='100'>
-            <button id='create-btn' class='button is-primary' type='submit'>Create!</button>
-          </form>
-          <div class='container'>
-            <button id='collection-btn' class='button is-grey-dark'>Add to Collection!</button>
-            <button id='print-btn' class='button is-primary'>Print / Screenshot View!</button>
+        <div id="main-sidebar" class="column">
+
+          <div id='controls-container' class='has-text-centered'>
+            <h4 class='title is-4'>Controls</h4>
+            <form id='canvas-form'>
+              <h5>How many shapes would you like?</h5>
+              <input id='num-shapes' type='number' name='numShapes' max='10000' value='100'>
+              <button id='create-btn' class='button is-primary' type='submit'>Create!</button>
+            </form>
+            <div class='container'>
+              <button id='collection-btn' class='button is-grey-dark'>Add to Collection!</button>
+              <a href='javascript:window.print();' id='print-btn' class='button is-primary'>Print!</a>
+            </div>
+          </div>
+
+          <div id="help-menu">
+            <h3 class='title is-4'>Help</h3>
+            <div>
+              <h5 class="title is-5">How to Play</h5>
+              <p>Instructions for how to play go here yay!</p>
+            </div>
+            <div>
+              <h5 class="title is-5">How to Export</h5>
+              <p>It'll be nice to turn this into a modal or tooltip instead. Stretch goals yay!</p>
+            </div>
           </div>
         </div>
       </div>

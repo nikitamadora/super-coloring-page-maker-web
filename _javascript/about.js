@@ -1,5 +1,6 @@
 /* ======= ======= ======= ======= ======= */
-/* POPOP.JS - FUNCTIONALITY FOR YOUR MODAL */
+/* [ Modified ] POPOP.JS Original by @catcarbn ♡
+/  https://catcarbonell.github.io/popop/
 /* ======= ======= ======= ======= ======= */
 
 ///* - DOCUMENT ELEMENTS - *///
