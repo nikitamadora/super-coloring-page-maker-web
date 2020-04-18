@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Super Coloring Page Maker!</title>
+    <link rel='stylesheet' href='css/main.css'>
+    <script defer type='text/javascript' src='lib/main.js'></script>
+  </head>
+  <body>
+    <section class='section columns' id='header'>
+        <!-- Logo - Convert to Image -->
+      <div class='placeholder-logo column'></div>
+      <div class='container column'>
+        <button class='is-primary button'>Gallery</button>
+        <button class='is-info button'>About</button>
+      </div>
+    </section>
+
+    <section class='container'>
+      <div class='columns'>
+        <div class='column'>
+          <h2>Canvas</h2>
+          <div id='canvas' class='bg-test-2'></div>
+          <button id='clear-button' class='button is-warning'>Clear</button>
+        </div>
+
+        <div id='controls-container' class='column'>
+          <h2>Controls</h2>
+          <form id='canvas-form'>
+            <h5>How many shapes would you like? (max 250)</h5>
+            <input id='num-shapes' type='number' name='numShapes' max='250' value='25'>
+            <button id='create-btn' class='button is-primary' type='submit'>Create!</button>
+          </form>
+          <div class='container'>
+            <button id='collection-btn' class='button is-grey-dark'>Add to Collection!</button>
+            <button id='print-btn' class='button is-grey-light'>Print Me!</button>
+            <button id='export-btn' class='button is-grey-lighter'>Export Me!</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </body>
+</html>
