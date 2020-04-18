@@ -87,7 +87,8 @@ const addToCollection = () => {
       .then(response => response.json())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
-    // TODO Convert to a modal with an escape 'x'
+    
+    alert('Thank you for your submission!');
   } else {
     alert('Sorry! As subjectively lovely as a blank canvas is, you may not submit one to the collection.');
   }
