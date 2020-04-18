@@ -9,13 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
 const canvas = document.querySelector('.canvas');
 const canvasForm = document.querySelector('#canvas-form');
 let numShapesEl = document.querySelector('#num-shapes');
-let userShapeChoice = 'rect';
+let userShapeChoice = 'square';
 
 let getRandomNum = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 };
+
 let canvasData = [];
 const createCanvas = (e) => {
   e.preventDefault();
@@ -23,6 +24,7 @@ const createCanvas = (e) => {
   for (let i = 0; i < numShapes; i++) {
     let shape = {
       id: i,
+      type: userShapeChoice,
       x: getRandomNum(-100, 600),
       y: getRandomNum(-100, 750),
       h: getRandomNum(3, 250),
@@ -32,9 +34,13 @@ const createCanvas = (e) => {
     canvasData.push(shape);
 
     let domShape = document.createElement('div');
-    domShape.setAttribute('class', `${userShapeChoice}`);
-    domShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x}px,${shape.y}px)`);
-    canvas.appendChild(domShape);
+    domShape.classList.add('shape', `${shape.type}`);
+    if (shape.type === 'rectangle' || shape.type === 'oval') {
+      domShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x}px,${shape.y}px)`);
+    } else if (shape.type === 'circle' || shape.type === 'square') {
+      domShape.setAttribute('style', `width:${shape.w}px; height:${shape.w}px; transform: translate(${shape.x}px, ${shape.y}px`);
+    }
+      canvas.appendChild(domShape);
   };
 };
 

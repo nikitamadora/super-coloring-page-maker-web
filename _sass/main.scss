@@ -42,6 +42,8 @@ $primary-invert: $pink-invert;
 
 @media print {
   .logo, .button, 
+  #controls-container,
+  #help-menu,
   input, h1, h2, h3, h4, h5, h6 {
     display: none;
   }
@@ -57,6 +59,27 @@ $primary-invert: $pink-invert;
 
   #controls-container {
     display: none;
+  }
+  #gal-01 {
+  border: 1px solid red;
+}
+  .gal-02 {
+    border: 1px solid rgb(217, 224, 70);
+  }
+  .gal-03 {
+    border: 1px solid rgb(168, 224, 70);
+  }
+  .gal-04 {
+    border: 1px solid aquamarine;
+  }
+  .gal-05 {
+    border: 1px solid lightsteelblue;
+  }
+  .gal-06 {
+    border: 1px solid lightcoral;
+  }
+  .gal-07 {
+    border: 1px solid purple;
   }
 }
 
@@ -76,15 +99,13 @@ $primary-invert: $pink-invert;
     0 12.5px 10px rgba(0, 0, 0, 0.06)
 }
 
-.rect {
+.shape {
   border: 1px solid black;
   position: absolute;
 }
 
-.circle {
-  border: 1px solid black;
-  position: absolute;
-  // border-radius: 5%;
+.circle, .oval {
+  border-radius: 50%;
 }
 
 // ------------------------------------ GALLERY
@@ -105,25 +126,25 @@ $primary-invert: $pink-invert;
 
 
 #gal-01 {
-  background-color: rgb(224, 70, 131);
+  border: rgb(224, 70, 131);
 }
 #gal-02 {
-  background-color: rgb(217, 224, 70);
+  border: rgb(217, 224, 70);
 }
 #gal-03 {
-  background-color: rgb(168, 224, 70);
+  border: rgb(168, 224, 70);
 }
 #gal-04 {
-  background-color: aquamarine;
+  border: aquamarine;
 }
 #gal-05 {
-  background-color: lightsteelblue;
+  border: lightsteelblue;
 }
 #gal-06 {
-  background-color: lightcoral;
+  border: lightcoral;
 }
 #gal-07 {
-  background-color: purple;
+  border: purple;
 }
 
 // ---------------------------------POPOP MODALS
