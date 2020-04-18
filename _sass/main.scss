@@ -27,6 +27,7 @@ $primary-invert: $pink-invert;
 */
 
 @import "../node_modules/bulma/bulma";
+@import "./popop.scss";
 
 // ------------------------------------ GLOBAL
 .container {
@@ -145,45 +146,4 @@ $primary-invert: $pink-invert;
 }
 #gal-07 {
   border: purple;
-}
-
-// ---------------------------------POPOP MODALS
-// -- Original created by @catcarbn ♡
-// -- https://catcarbonell.github.io/popop/
-
-/* === MODAL === */
-.popop-modal {
-  visibility: hidden;
-  flex-direction: column;
-  opacity: 0;
-  z-index: 999;
-  width: 50%;
-  height: 75%;
-  padding: 20px;
-  border: 1px solid #333;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 7px 7px rgba(54,54,54, 0.5);
-  position: absolute;
-  margin: auto;
-  top: 0; 
-  left: 0; 
-  bottom: 0; 
-  right: 0;
-  transition: 0.2s ease-in-out all;
-}
-.popop-content{
-  overflow: auto;
-  height: 90%;
-  padding: 10px
-}
-.popop-fixed {
-  position: fixed;
-  height: 30px;
-  padding-top: 10px;
-}
-/* === VISIBILITY === */
-.popop-show{
- visibility: visible;
- opacity: 1;
 }

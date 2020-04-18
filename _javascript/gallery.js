@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // create div element for gallery
       let galleryItem = document.createElement('a');
       let artworkID = galleryObj._id;
-      console.log(artworkID);
-      galleryItem.setAttribute('class', 'gallery-item');
+      galleryItem.classList.add('gallery-item');
       galleryItem.setAttribute('href', `/view/${artworkID}`);
 
       // create shapes for the artwork
@@ -27,15 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
       for (let i = 0; i < numShapes; i++) {
         let shape = {
           id: i,
+          type: artworkData[i].type,
           x: artworkData[i].x,
           y: artworkData[i].y,
           h: artworkData[i].h,
           w: artworkData[i].w
         }
-        // TODO add math to reduce values of x, y, h, and w by /3
         let artworkShape = document.createElement('div');
-        artworkShape.setAttribute('class', 'rect');
-        artworkShape.setAttribute('style', `width:${shape.w/3}px; height:${shape.h/3}px; transform: translate(${shape.x/3}px,${shape.y/3}px)`);
+        artworkShape.classList.add('shape', `${shape.type}`);
+        if (shape.type === 'rectangle' || shape.type === 'oval') {
+          artworkShape.setAttribute('style', `width:${shape.w/3}px; height:${shape.h/3}px; transform: translate(${shape.x/3}px,${shape.y/3}px)`);
+        } else if (shape.type === 'circle' || shape.type === 'square') {
+          artworkShape.setAttribute('style', `width:${shape.w/3}px; height:${shape.w/3}px; transform: translate(${shape.x/3}px, ${shape.y/3}px`);
+        };
         galleryItem.appendChild(artworkShape);
       }
       
