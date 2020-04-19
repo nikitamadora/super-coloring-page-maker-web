@@ -68,14 +68,11 @@ $primary-invert: $pink-invert;
   max-width: 70vw;
   width: 500px;
   height: auto;
-  border: 1px solid aqua;
-  // margin: 10vw;
 }
 
 #nav-buttons {
   display: inline-block;
   margin: 10px;
-  border: 1px solid red;
   text-align: right;
 }
 
@@ -93,6 +90,69 @@ $primary-invert: $pink-invert;
   font-size: xx-large;
   font-weight: 200;
   text-align: center;
+  &:hover {
+    -webkit-animation: wobble-hor-bottom 0.8s both;
+    animation: wobble-hor-bottom 0.8s both;
+    
+    @-webkit-keyframes wobble-hor-bottom {
+      0%,
+      100% {
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+      }
+      15% {
+        -webkit-transform: translateX(-30px) rotate(-6deg);
+                transform: translateX(-30px) rotate(-6deg);
+      }
+      30% {
+        -webkit-transform: translateX(15px) rotate(6deg);
+                transform: translateX(15px) rotate(6deg);
+      }
+      45% {
+        -webkit-transform: translateX(-15px) rotate(-3.6deg);
+                transform: translateX(-15px) rotate(-3.6deg);
+      }
+      60% {
+        -webkit-transform: translateX(9px) rotate(2.4deg);
+                transform: translateX(9px) rotate(2.4deg);
+      }
+      75% {
+        -webkit-transform: translateX(-6px) rotate(-1.2deg);
+                transform: translateX(-6px) rotate(-1.2deg);
+      }
+    }
+    @keyframes wobble-hor-bottom {
+      0%,
+      100% {
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+      }
+      15% {
+        -webkit-transform: translateX(-30px) rotate(-6deg);
+                transform: translateX(-30px) rotate(-6deg);
+      }
+      30% {
+        -webkit-transform: translateX(15px) rotate(6deg);
+                transform: translateX(15px) rotate(6deg);
+      }
+      45% {
+        -webkit-transform: translateX(-15px) rotate(-3.6deg);
+                transform: translateX(-15px) rotate(-3.6deg);
+      }
+      60% {
+        -webkit-transform: translateX(9px) rotate(2.4deg);
+                transform: translateX(9px) rotate(2.4deg);
+      }
+      75% {
+        -webkit-transform: translateX(-6px) rotate(-1.2deg);
+                transform: translateX(-6px) rotate(-1.2deg);
+      }
+    }    
+  }
 }
 
 @media screen and (max-width: 1220px) {
@@ -211,7 +271,7 @@ $primary-invert: $pink-invert;
     background: linear-gradient(217deg, #00ffd9, rgb(243, 57, 132));
     background-size: 400% 400%;
 
-    -webkit-animation: PinktoGreen 4s ease infinite;
+    -webkit-animation: hotPinkToAqua 4s ease infinite;
     -moz-animation: hotPinkToAqua 4s ease infinite;
     animation: hotPinkToAqua 4s ease infinite;
 
