@@ -129,21 +129,21 @@ $primary-invert: $pink-invert;
     background: linear-gradient(38deg, #00dddf, #aae30090, #e300819f, #7d00e3);
     background-size: 800% 800%;
 
-    -webkit-animation: AnimationName 12s ease infinite;
-    -moz-animation: AnimationName 12s ease infinite;
-    animation: AnimationName 12s ease infinite;
+    -webkit-animation: rainbowRotation 12s ease infinite;
+    -moz-animation: rainbowRotation 12s ease infinite;
+    animation: rainbowRotation 12s ease infinite;
 
-    @-webkit-keyframes AnimationName {
+    @-webkit-keyframes rainbowRotation {
         0%{background-position:0% 50%}
         50%{background-position:100% 50%}
         100%{background-position:0% 50%}
     }
-    @-moz-keyframes AnimationName {
+    @-moz-keyframes rainbowRotation {
         0%{background-position:0% 50%}
         50%{background-position:100% 50%}
         100%{background-position:0% 50%}
     }
-    @keyframes AnimationName {
+    @keyframes rainbowRotation {
         0%{background-position:0% 50%}
         50%{background-position:100% 50%}
         100%{background-position:0% 50%}
