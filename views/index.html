@@ -15,58 +15,59 @@
         <img src='images/super-heckin-logo.png'>
       </a>
       <nav id='nav-buttons'>
-        <a href='/gallery' class='nav-button' id='gallery-button'>Gallery</a>
-        <a href='/about' class='nav-button' id='about-button'>About</a>
+        <a href='/gallery' class='nav-button'>Gallery</a>
+        <a href='/about' class='nav-button'>About</a>
       </nav>
     </section>
 
     <!-- --== CANVAS ==-- -->
-    <section class='container'>
+    <section id='artboard'>
       <div class='columns'>
+
+        <!-- --== CANVAS SIDE ==-- -->
         <div class='column has-text-centered'>
-          <h2 class='title'>Canvas</h2>
-          <div class='canvas' id='main-canvas'>
+          <h2>Canvas</h2>
+          <div class='canvas'>
             <!-- Wonderful Shapes Render Here! -->
           </div>
-          <button id='clear-button' class='button is-danger is-outlined'>Clear</button>
         </div>
 
         <!-- --== SIDEBAR ==-- -->
-        <div id="main-sidebar" class="column">
+        <div class="column">
 
           <!-- -= CONTROLS =- -->
-          <div id='controls-container' class='has-text-centered'>
-            <h4 class='title is-4'>Controls</h4>
+          <div id='control-panel' class='has-text-centered'>
+            <h4>Controls</h4>
 
             <form id='canvas-form'>
 
-              <div class="gimmespace">
-                <h5 class='title is-6'>How many shapes would you like?</h5>
+              <div>
+                <h5>How many shapes would you like?</h5>
                 <input id='num-shapes' class='input' type='number' name='numShapes' max='10000' value='25'>
               </div>
 
-              <div class='gimmespace'>
-                <h5 class='title is-6'>Which shape?</h5>
+              <div>
+                <h5>Which shape?</h5>
                 <div class='control has-text-centered'>
 
                   <div class="radio-block">
                     <input id='rectangleOpt' type='radio' name='shape' value='rectangle'>
-                    <label for='rectangleOpt' class='radio title is-6'>Rectangles</label>
+                    <label for='rectangleOpt' class='radio'>Rectangles</label>
                   </div>
                   
                   <div class="radio-block">
                     <input id='squareOpt' type='radio' name='shape' value='square'>
-                    <label for='squareOpt' class='radio title is-6'>Squares</label>
+                    <label for='squareOpt' class='radio'>Squares</label>
                   </div>
                   
                   <div class="radio-block">
                     <input id='ovalOpt' type='radio' name='shape' value='oval'>
-                    <label for='ovalOpt' class='radio title is-6'>Ovals</label>
+                    <label for='ovalOpt' class='radio'>Ovals</label>
                   </div>
                   
                   <div class="radio-block">
                     <input id='circleOpt' type='radio' name='shape' value='circle'>
-                    <label for='circleOpt' class='radio title is-6'>Circles</label>
+                    <label for='circleOpt' class='radio'>Circles</label>
                   </div>
 
                 </div>
