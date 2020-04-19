@@ -53,6 +53,10 @@ $primary-invert: $pink-invert;
   background-color: #fff;
 }
 
+.gimmespace {
+  margin: 10px;
+}
+
 // ----------------------------- BULMA OVERWRITE
 .input {
   max-width: 30%;
@@ -175,6 +179,10 @@ $primary-invert: $pink-invert;
         100%{background-position:0% 50%}
     }
   }
+}
+
+.radio-block {
+  display: block;
 }
 
 // ------------------------------------ GALLERY

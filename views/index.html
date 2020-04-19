@@ -36,9 +36,41 @@
           <!-- -= CONTROLS =- -->
           <div id='controls-container' class='has-text-centered'>
             <h4 class='title is-4'>Controls</h4>
+
             <form id='canvas-form'>
-              <h5 class='title is-6'>How many shapes would you like?</h5>
-              <input id='num-shapes' class='input' type='number' name='numShapes' max='10000' value='25'>
+
+              <div class="gimmespace">
+                <h5 class='title is-6'>How many shapes would you like?</h5>
+                <input id='num-shapes' class='input' type='number' name='numShapes' max='10000' value='25'>
+              </div>
+
+              <div class='gimmespace'>
+                <h5 class='title is-6'>Which shape?</h5>
+                <div class='control has-text-centered'>
+
+                  <div class="radio-block">
+                    <input id='rectangleOpt' type='radio' name='shape' value='rectangle'>
+                    <label for='rectangleOpt' class='radio title is-6'>Rectangles</label>
+                  </div>
+                  
+                  <div class="radio-block">
+                    <input id='squareOpt' type='radio' name='shape' value='square'>
+                    <label for='squareOpt' class='radio title is-6'>Squares</label>
+                  </div>
+                  
+                  <div class="radio-block">
+                    <input id='ovalOpt' type='radio' name='shape' value='oval'>
+                    <label for='ovalOpt' class='radio title is-6'>Ovals</label>
+                  </div>
+                  
+                  <div class="radio-block">
+                    <input id='circleOpt' type='radio' name='shape' value='circle'>
+                    <label for='circleOpt' class='radio title is-6'>Circles</label>
+                  </div>
+
+                </div>
+              </div>
+
               <button href='#!' id='create-btn' class='ctrl-btn' type='submit'>Create!</button>
             </form>
             <div class='container'>

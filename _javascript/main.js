@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const canvas = document.querySelector('.canvas');
 const canvasForm = document.querySelector('#canvas-form');
 let numShapesEl = document.querySelector('#num-shapes');
-let userShapeChoice = 'square';
+// let userShapeChoice = 'square';
 
 let getRandomNum = (min, max) => {
   min = Math.ceil(min);
@@ -19,6 +19,7 @@ let getRandomNum = (min, max) => {
 
 let canvasData = [];
 const createCanvas = (e) => {
+  let userShapeChoice = canvasForm.querySelector('input[type=radio]:checked').value;
   e.preventDefault();
   let numShapes = numShapesEl.value;
   for (let i = 0; i < numShapes; i++) {
