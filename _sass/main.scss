@@ -30,31 +30,83 @@ $primary-invert: $pink-invert;
 @import "./popop.scss";
 
 // ------------------------------------ GLOBAL
+// Rainbow Background
 // body {
 //   background: rgb(255,0,140);
-//   background: -moz-linear-gradient(211deg, rgba(255,0,140,1) 0%, rgba(255,194,139,1) 28%, rgba(209,255,129,1) 50%, rgba(46,255,223,1) 75%, rgba(113,136,255,1) 100%);
-//   background: -webkit-linear-gradient(211deg, rgba(255,0,140,1) 0%, rgba(255,194,139,1) 28%, rgba(209,255,129,1) 50%, rgba(46,255,223,1) 75%, rgba(113,136,255,1) 100%);
-//   background: linear-gradient(211deg, rgba(255,0,140,1) 0%, rgba(255,194,139,1) 28%, rgba(209,255,129,1) 50%, rgba(46,255,223,1) 75%, rgba(113,136,255,1) 100%);
+//   background: -moz-linear-gradient(211deg, rgba(255,0,140,.67) 0%, rgba(255,194,139,.67) 28%, rgba(209,255,129,.67) 50%, rgba(46,255,223,.67) 75%, rgba(113,136,255,.67) 100%);
+//   background: -webkit-linear-gradient(211deg, rgba(255,0,140,.67) 0%, rgba(255,194,139,.67) 28%, rgba(209,255,129,.67) 50%, rgba(46,255,223,.67) 75%, rgba(113,136,255,.67) 100%);
+//   background: linear-gradient(211deg, rgba(255,0,140,.67) 0%, rgba(255,194,139,.67) 28%, rgba(209,255,129,.67) 50%, rgba(46,255,223,.67) 75%, rgba(113,136,255,.67) 100%);
 //   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff008c",endColorstr="#7188ff",GradientType=1);
 // }
 
-.container {
-  margin: 0 auto;
-  max-width: 960px;
-}
-
-.logo {
-  max-width: 25%;
-  min-width: 200px;
-  height: auto;
-}
-
-.canvas, .gallery-item {
+.canvas, 
+.gallery-item {
   background-color: #fff;
 }
 
-.gimmespace {
+// .container {
+//   margin: 0 auto;
+//   max-width: 960px;
+// }
+
+
+// --------------------------------------- NAV
+#nav {
+  margin: 0 0 20px 0;
+  padding: 15px;
+  // border: 1px solid orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-box-shadow: 5px 11px 18px -1px rgba(0,0,0,0.14);
+  -moz-box-shadow: 5px 11px 18px -1px rgba(0,0,0,0.14);
+  box-shadow: 5px 11px 18px -1px rgba(0, 0, 0, 0.14);
+}
+
+#logo {
+  display: inline-block;
+  max-width: 70vw;
+  width: 500px;
+  height: auto;
+  border: 1px solid aqua;
+  // margin: 10vw;
+}
+
+#nav-buttons {
+  display: inline-block;
   margin: 10px;
+  border: 1px solid red;
+  text-align: right;
+}
+
+.nav-button {
+  -webkit-box-shadow: 5px 11px 18px -1px rgba(0,0,0,0.24);
+  -moz-box-shadow: 5px 11px 18px -1px rgba(0,0,0,0.24);
+  box-shadow: 5px 11px 18px -1px rgba(0,0,0,0.24);
+  box-shadow: 5px 11px 18px -1px rgba(0, 0, 0, 0.24);
+  display: inline-block;
+  margin: .5vw;
+  width: 20vw;
+  height: 5vw;
+  line-height: 5vw;
+  border-radius: 15px;
+  font-size: xx-large;
+  font-weight: 200;
+  text-align: center;
+}
+
+@media screen and (max-width: 1220px) {
+  .nav-button {
+    font-size: x-large;
+    width: 20vw;
+    height: 58px;
+    line-height: 58px;
+    margin: 5px;
+  }
+}
+
+#gallery-button {
+  color: gray;
 }
 
 // ----------------------------- BULMA OVERWRITE
