@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const canvas = document.querySelector('.canvas');
 const canvasForm = document.querySelector('#canvas-form');
 let numShapesEl = document.querySelector('#num-shapes');
-// let userShapeChoice = 'square';
 
 let getRandomNum = (min, max) => {
   min = Math.ceil(min);
@@ -98,3 +97,33 @@ const addToCollection = () => {
 collectionButton.addEventListener('click', addToCollection);
 
 
+// --------- -=> Experimental Sandbox Funtimes <=- ---------
+let shapeChoice = 'square';
+const createSpiral = () => {
+  let numShapes = 10;
+  let shapeWidth = 200;
+  let shapeHeight = 200;
+  let origin = 'top left'
+  // let rotation = 5;
+  for (let i = 0; i < numShapes; i++) {
+    let shape = {
+      id: i,
+      type: shapeChoice,
+      x: 312.5,
+      y: 325,
+      h: shapeHeight,
+      w: shapeWidth,
+      rotation: i * 3,
+      origin: origin
+    }
+    // Adds `shape` object to array for both rendering shapes in canvas now, and exporting to db for later retrieval
+    canvasData.push(shape);
+
+    let domShape = document.createElement('div');
+    domShape.classList.add('shape', `${shape.type}`);
+    domShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x}px,${shape.y}px) rotate(${shape.rotation}deg)`);
+
+    canvas.appendChild(domShape);
+  };
+};
+createSpiral();
