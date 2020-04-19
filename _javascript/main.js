@@ -103,7 +103,7 @@ const createSpiral = () => {
   let numShapes = 10;
   let shapeWidth = 200;
   let shapeHeight = 200;
-  let origin = 'top left'
+  let origin = 'center'
   // let rotation = 5;
   for (let i = 0; i < numShapes; i++) {
     let shape = {
@@ -113,7 +113,7 @@ const createSpiral = () => {
       y: 325,
       h: shapeHeight,
       w: shapeWidth,
-      rotation: i * 3,
+      rotation: i * 9,
       origin: origin
     }
     // Adds `shape` object to array for both rendering shapes in canvas now, and exporting to db for later retrieval
@@ -121,7 +121,7 @@ const createSpiral = () => {
 
     let domShape = document.createElement('div');
     domShape.classList.add('shape', `${shape.type}`);
-    domShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x}px,${shape.y}px) rotate(${shape.rotation}deg)`);
+    domShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x * 1.5}px,${shape.y * 1.5}px) rotate(${shape.rotation}deg)`);
 
     canvas.appendChild(domShape);
   };
