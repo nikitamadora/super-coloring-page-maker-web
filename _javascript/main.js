@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const canvas = document.querySelector('.canvas');
 const canvasForm = document.querySelector('#canvas-form');
 let numShapesEl = document.querySelector('#num-shapes');
-// let userShapeChoice = 'square';
 
 let getRandomNum = (min, max) => {
   min = Math.ceil(min);

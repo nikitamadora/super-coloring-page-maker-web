@@ -214,29 +214,25 @@ label {
   .canvas {
     box-shadow: none !important;
     border: 2px solid #000 !important;
-    margin: 120px auto !important ;
+    margin: 50px auto !important ;
     display: block;
     width: 100%;
     height: auto;
   }
 
-  #controls-container {
+  #control-panel {
     display: none;
   }
 }
 
 // ------------------------------------ CANVAS
 #artboard {
-  border: 1px dashed aquamarine;
   padding: 5vh;
-}
-
-.container {
-  border: 1px dashed grey;
+  display: flex;
+  justify-content: center;
 }
 
 .canvas {
-  border: 1px solid red;
   position: relative;
   overflow: hidden;
   width: 625px;
@@ -259,84 +255,153 @@ label {
 }
 
 // ----------------------------------- CONTROLS
+
 #control-panel {
-  border: 2px dotted #888;
-  max-width: 300px;
+  // border: 4px dotted rgb(167, 70, 224);
+  border: 2px solid rgba(0, 0, 0, 0.062);
+  min-width: 300px;
   margin-top: 100px;
-  padding: 10px;
-  background: #fff;
+  padding: 20px;
+  background: rgba(255, 255, 255, 1);
   border-radius: 10px;
   box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, .1);
 }
 
-.ctrl-btn {
+.rainbow-border {
   display: block;
   min-width: 150px;
   max-width: 250px;
   width: 80%;
   height: 70px;
-  line-height: 70px;
-  border: none;
-  border-radius: 10px;
+  padding: 8px;
+  border-radius: 12px;
   margin: 10px auto;
-  background:rgba(255, 255, 255, 0.329);
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-  color: #fff;
-  font-size: 1.5em;
-  font-weight: 500;
-  &#create-btn {
-    background: linear-gradient(38deg, rgb(92, 255, 247), rgb(255, 217, 92), rgb(255, 65, 128), rgb(141, 92, 255));
+  background: linear-gradient(
+    38deg, 
+    rgb(92, 255, 247), 
+    rgb(255, 217, 92), 
+    rgb(255, 65, 128), 
+    rgb(141, 92, 255));
     background-size: 800% 800%;
 
-    -webkit-animation: navRainbow 12s ease infinite;
-    -moz-animation: navRainbow 12s ease infinite;
-    animation: navRainbow 12s ease infinite;
+    -webkit-animation: rainbowBorder 12s ease infinite;
+    -moz-animation: rainbowBorder 12s ease infinite;
+    animation: rainbowBorder 12s ease infinite;
 
-    @-webkit-keyframes navRainbow {
+    @-webkit-keyframes rainbowBorder {
         0%{background-position:0% 50%}
         50%{background-position:100% 50%}
         100%{background-position:0% 50%}
     }
-    @-moz-keyframes navRainbow {
+    @-moz-keyframes rainbowBorder {
         0%{background-position:0% 50%}
         50%{background-position:100% 50%}
         100%{background-position:0% 50%}
     }
-    @keyframes navRainbow {
+    @keyframes rainbowBorder {
         0%{background-position:0% 50%}
         50%{background-position:100% 50%}
         100%{background-position:0% 50%}
     }
-  }
+  box-shadow: 2px 3px 7px 1px rgba(162, 0, 255, 0.3);
+}
+
+.pink-purple-border {
+  display: block;
+  min-width: 150px;
+  max-width: 250px;
+  width: 80%;
+  height: 70px;
+  padding: 8px;
+  border-radius: 12px;
+  margin: 10px auto;
+  background: linear-gradient(
+    72deg,
+    rgb(255, 65, 128), 
+    rgb(116, 57, 255));
+    background-size: 800% 800%;
+
+    -webkit-animation: pinkPurpleBorder 12s ease infinite;
+    -moz-animation: pinkPurpleBorder 12s ease infinite;
+    animation: pinkPurpleBorder 12s ease infinite;
+
+    @-webkit-keyframes pinkPurpleBorder {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes pinkPurpleBorder {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes pinkPurpleBorder {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+  box-shadow: 2px 3px 7px 1px rgba(162, 0, 255, 0.3);
+}
+
+.pink-purple-border-inverse {
+  display: block;
+  min-width: 150px;
+  max-width: 250px;
+  width: 80%;
+  height: 70px;
+  padding: 8px;
+  border-radius: 12px;
+  margin: 10px auto;
+  background: linear-gradient(
+    162deg,
+    rgb(116, 57, 255),
+    rgb(255, 65, 128));
+    background-size: 800% 800%;
+
+    -webkit-animation: pinkPurpleBorder 12s ease infinite;
+    -moz-animation: pinkPurpleBorder 12s ease infinite;
+    animation: pinkPurpleBorder 12s ease infinite;
+
+    @-webkit-keyframes pinkPurpleBorder {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes pinkPurpleBorder {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes pinkPurpleBorder {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+  box-shadow: 2px 3px 7px 1px rgba(162, 0, 255, 0.3);
+}
+
+.ctrl-btn {
+  display: block;
+  line-height: 100%;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  
+  color: #888;
+  font-size: 1.5em;
+  font-weight: 400;
+  background: rgba(255, 255, 255, .9);
+
   &:focus {
     outline: none;
   }
+
   &:hover {
     cursor: pointer;
     border: none;
-    color: #fff;
-    background: linear-gradient(217deg, #00ffd9, rgb(243, 57, 132));
-    background-size: 400% 400%;
-
-    -webkit-animation: hotPinkToAqua 4s ease infinite;
-    -moz-animation: hotPinkToAqua 4s ease infinite;
-    animation: hotPinkToAqua 4s ease infinite;
-
-    @-webkit-keyframes hotPinkToAqua {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
-    @-moz-keyframes hotPinkToAqua {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
-    @keyframes hotPinkToAqua {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
+    color: rgb(119, 64, 248);
   }
 }
 
