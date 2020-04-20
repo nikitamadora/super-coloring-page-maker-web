@@ -9,51 +9,88 @@
     <script defer type='text/javascript' src='lib/main.js'></script>
   </head>
   <body>
-    <section class='section columns' id='header'>
-      <a href='/'>
-        <img class='logo' src='images/super-heckin-logo.png'>
+    <!--  --== NAV ==-- -->
+    <section id='nav'>
+      <a href='/' id='logo'>
+        <img src='images/super-heckin-logo.png'>
       </a>
-      <div class='container column'>
-        <a href='/gallery' class='is-primary button'>Gallery</a>
-        <a href='/about' class='is-info button'>About</a>
-      </div>
+      <nav id='nav-buttons'>
+        <a href='/gallery' class='nav-button'>Gallery</a>
+        <a href='/about' class='nav-button'>About</a>
+      </nav>
     </section>
 
-    <section class='container'>
+    <!-- --== CANVAS ==-- -->
+    <section id='artboard'>
       <div class='columns'>
+
+        <!-- --== CANVAS SIDE ==-- -->
         <div class='column has-text-centered'>
-          <h2 class='title'>Canvas</h2>
-          <div class='canvas' id='main-canvas'>
+          <h2>Canvas</h2>
+          <div class='canvas'>
             <!-- Wonderful Shapes Render Here! -->
           </div>
-          <button id='clear-button' class='button is-danger is-outlined'>Clear</button>
         </div>
 
-        <div id="main-sidebar" class="column">
+        <!-- --== SIDEBAR ==-- -->
+        <div class='column'>
 
-          <div id='controls-container' class='has-text-centered'>
-            <h4 class='title is-4'>Controls</h4>
+          <!-- -= CONTROLS =- -->
+          <div id='control-panel' class='has-text-centered'>
+            <h4>Controls</h4>
+
             <form id='canvas-form'>
-              <h5>How many shapes would you like?</h5>
-              <input id='num-shapes' type='number' name='numShapes' max='10000' value='100'>
-              <button id='create-btn' class='button is-primary' type='submit'>Create!</button>
+
+              <div>
+                <h5>How many shapes would you like?</h5>
+                <input id='num-shapes' class='input' type='number' name='numShapes' max='10000' value='25'>
+              </div>
+
+              <div>
+                <div class='control-opt'>
+                  <h5>Pick A Shape!</h5>
+                  <div class='control has-text-centered'>
+
+                    <div class='radio-block'>
+                      <input id='rectangleOpt' type='radio' name='shape' value='rectangle'>
+                      <label for='rectangleOpt' class='radio'>Rectangles</label>
+                    </div>
+                    
+                    <div class='radio-block'>
+                      <input id='squareOpt' type='radio' name='shape' value='square'>
+                      <label for='squareOpt' class='radio'>Squares</label>
+                    </div>
+                    
+                    <div class='radio-block'>
+                      <input id='ovalOpt' type='radio' name='shape' value='oval'>
+                      <label for='ovalOpt' class='radio'>Ovals</label>
+                    </div>
+                    
+                    <div class='radio-block'>
+                      <input id='circleOpt' type='radio' name='shape' value='circle'>
+                      <label for='circleOpt' class='radio'>Circles</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class='rainbow-border'>
+                <button href='#!' id='create-btn' class='ctrl-btn' type='submit'>Create!</button>
+              </div>
             </form>
-            <div class='container'>
-              <button id='collection-btn' class='button is-grey-dark'>Add to Collection!</button>
-              <a href='javascript:window.print();' id='print-btn' class='button is-primary'>Print!</a>
+            <div class='pink-purple-border'>
+              <button type='button' id='collection-btn' class='ctrl-btn'>Add to Collection!</button>
+            </div>
+            <div class='pink-purple-border-inverse'>
+              <button type='button' javascript:window.print();' id='print-btn' class='ctrl-btn'>Print!</button>
+            </div>
+            <div class='clear-border'>
+              <button type='button' id='clear-button' class='ctrl-btn'>Clear Canvas</button>
             </div>
           </div>
 
-          <div class='gal-01' id="help-menu">
-            <h3 class='gal-02 title is-4'>Help</h3>
-            <div class='gal-06'>
-              <h5 class="gal-03 title is-5">How to Play</h5>
-              <p class='gal-04'>Instructions for how to play go here yay!</p>
-            </div>
-            <div class='gal-07'>
-              <h5 class="title is-5">How to Export</h5>
-              <p>It'll be nice to turn this into a modal or tooltip instead. Stretch goals yay!</p>
-            </div>
+          <!-- -= HELP MENU =- -->
+        
           </div>
         </div>
       </div>

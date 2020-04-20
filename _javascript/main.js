@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const canvas = document.querySelector('.canvas');
 const canvasForm = document.querySelector('#canvas-form');
 let numShapesEl = document.querySelector('#num-shapes');
-let userShapeChoice = 'square';
 
 let getRandomNum = (min, max) => {
   min = Math.ceil(min);
@@ -19,6 +18,7 @@ let getRandomNum = (min, max) => {
 
 let canvasData = [];
 const createCanvas = (e) => {
+  let userShapeChoice = canvasForm.querySelector('input[type=radio]:checked').value;
   e.preventDefault();
   let numShapes = numShapesEl.value;
   for (let i = 0; i < numShapes; i++) {
@@ -70,7 +70,7 @@ const printButton = document.querySelector('#print-btn');
 const collectionButton = document.querySelector('#collection-btn');
 
 const addToCollection = () => {
-  let canvasContents = document.querySelector('#main-canvas').children;
+  let canvasContents = document.querySelector('.canvas').children;
   if (canvasContents.length > 0) {
     let exportableString = JSON.stringify(canvasData);
 
@@ -87,7 +87,8 @@ const addToCollection = () => {
       .then(response => response.json())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
-    // TODO Convert to a modal with an escape 'x'
+    
+    alert('Thank you for your submission!');
   } else {
     alert('Sorry! As subjectively lovely as a blank canvas is, you may not submit one to the collection.');
   }
