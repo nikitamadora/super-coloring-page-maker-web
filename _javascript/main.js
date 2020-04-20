@@ -27,17 +27,17 @@ const createCanvas = (e) => {
       type: userShapeChoice,
       x: getRandomNum(-100, 500),
       y: getRandomNum(-100, 600),
-      // h: getRandomNum(3, 750),
-      // w: getRandomNum(3, 750)
-      w: getRandomNum(3, 400),
-      h: getRandomNum(3, 400)
+      h: getRandomNum(3, 750),
+      w: getRandomNum(3, 750)
+      // w: getRandomNum(3, 400),
+      // h: getRandomNum(3, 400)
     }
     // Adds `shape` object to array for both rendering shapes in canvas now, and exporting to db for later retrieval
     canvasData.push(shape);
 
     let domShape = document.createElement('div');
-    // domShape.classList.add('bounce-in-fwd', 'shape', `${shape.type}`);
-    domShape.classList.add('shape', `${shape.type}`);
+    domShape.classList.add('bounce-in-fwd', 'shape', `${shape.type}`);
+    // domShape.classList.add('shape', `${shape.type}`);
     if (shape.type === 'rectangle' || shape.type === 'oval') {
       domShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x}px,${shape.y}px)`);
     } else if (shape.type === 'circle' || shape.type === 'square') {

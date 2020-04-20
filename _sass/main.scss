@@ -202,8 +202,9 @@ label {
 // -------------------------------- PRINT STYLES
 @media print {
   .button, 
+  .super-button,
   #logo,
-  #main-sidebar,
+  #control-panel,
   #nav,
   #nav-buttons,
   input, h1, h2, h3, h4, h5, h6 {
@@ -213,7 +214,7 @@ label {
   .canvas {
     box-shadow: none !important;
     border: 2px solid #000 !important;
-    margin: 50px auto !important ;
+    margin: 65px auto !important ;
     display: block;
     width: 100%;
     height: auto;
