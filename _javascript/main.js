@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Hello Developer! Check out my GitHub, and feel free to play around!');
+  console.log('Hello Developer! Feel free to play around. (Psst! Try out `createSpiral(1)` with different numbers to see what is in the works.');
 });
 
 // ----------------------------------------------------
@@ -101,3 +101,35 @@ const addToCollection = () => {
 };
 
 collectionButton.addEventListener('click', addToCollection);
+
+// --------- -=> Experimental Sandbox Funtimes <=- ---------
+let shapeChoice = 'square';
+const createSpiral = (rtn) => {
+  let numShapes = 15;
+  let shapeWidth = 200;
+  let shapeHeight = 200;
+  let origin = 'center'
+  // let rotation = 5;
+  for (let i = 0; i < numShapes; i++) {
+    let shape = {
+      id: i,
+      type: shapeChoice,
+      x: 150,
+      y: 175,
+      h: shapeHeight,
+      w: shapeWidth,
+      rotation: i * rtn,
+      origin: origin
+    }
+    // Adds `shape` object to array for both rendering shapes in canvas now, and exporting to db for later retrieval
+    canvasData.push(shape);
+
+    let domShape = document.createElement('div');
+    domShape.classList.add('shape', `${shape.type}`);
+    domShape.setAttribute('style', `width:${shape.w}px; height:${shape.h}px; transform: translate(${shape.x * 1.5}px,${shape.y * 1.5}px) rotate(${shape.rotation}deg)`);
+
+    canvas.appendChild(domShape);
+  };
+};
+
+// createSpiral(3);
