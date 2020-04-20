@@ -96,4 +96,3 @@ const addToCollection = () => {
 
 collectionButton.addEventListener('click', addToCollection);
 
-
