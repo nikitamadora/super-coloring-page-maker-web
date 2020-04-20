@@ -7,6 +7,7 @@
     <title>Super Coloring Page Maker!</title>
     <link rel='stylesheet' href='css/main.css'>
     <script defer type='text/javascript' src='lib/main.js'></script>
+    <script defer type='text/javascript' src='lib/popop.js'></script>
   </head>
   <body>
     <!--  --== NAV ==-- -->
@@ -57,7 +58,7 @@
                     </div>
                     
                     <div class='radio-block'>
-                      <input id='squareOpt' type='radio' name='shape' value='square'>
+                      <input id='squareOpt' type='radio' name='shape' value='square' checked>
                       <label for='squareOpt' class='radio'>Squares</label>
                     </div>
                     
@@ -78,23 +79,45 @@
                 <button href='#!' id='create-btn' class='ctrl-btn' type='submit'>Create!</button>
               </div>
             </form>
-            <div class='pink-purple-border'>
-              <button type='button' id='collection-btn' class='ctrl-btn'>Add to Collection!</button>
-            </div>
-            <div class='pink-purple-border-inverse'>
-              <button type='button' javascript:window.print();' id='print-btn' class='ctrl-btn'>Print!</button>
-            </div>
-            <div class='clear-border'>
-              <button type='button' id='clear-button' class='ctrl-btn'>Clear Canvas</button>
-            </div>
+            <section id="control-buttons">
+              <div class='pink-purple-border'>
+              <button type='button' id='collection-btn' class='ctrl-btn'>Add to Gallery!</button>
+              </div>
+              <div class='pink-purple-border-inverse'>
+                <button type='button' id='print-btn' class='ctrl-btn'>Print!</button>
+              </div>
+              <div class='clear-border'>
+                <button type='button' id='clear-button' class='ctrl-btn'>Clear Canvas</button>
+              </div>
+            </section> 
           </div>
 
           <!-- -= HELP MENU =- -->
-        
+          <button type='button' class='super-button popop-open-btn has-text-centered title is-5' data-modal-id='modal-1'>Help?</div>
+
           </div>
         </div>
       </div>
 
+      <!-- --== HELP MODAL ==- -->
+      <div class='popop-modal' id='modal-1'>
+        <h1 class='title is-2 has-text-centered'>How to Use</h1>
+        <div class="content">
+          <p class='is-family-monospace'>
+            Use the controls to add your choice of shapes to the canvas. Once you have a design that you like, you can:
+          </p>
+          <ul class='is-family-code'>
+            <li>Print a real life hard copy to color in</li>
+            <li>Add it to the Gallery</li>
+            <li>Take a screenshot and color it in your favorite tablet program (I recommend Procreate on the iPad!)</li>
+          </ul>
+          <br />
+          <p class="is-family-monospace">Enjoy!</p>
+          </p>
+        </div>
+        <button class='popop-close-btn button is-primary'>Close</button>
+      </div>
+    
     </section>
 
   </body>
