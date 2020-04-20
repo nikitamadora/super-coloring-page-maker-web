@@ -70,7 +70,7 @@ const printButton = document.querySelector('#print-btn');
 const collectionButton = document.querySelector('#collection-btn');
 
 const addToCollection = () => {
-  let canvasContents = document.querySelector('#main-canvas').children;
+  let canvasContents = document.querySelector('.canvas').children;
   if (canvasContents.length > 0) {
     let exportableString = JSON.stringify(canvasData);
 
