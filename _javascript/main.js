@@ -56,7 +56,7 @@ const clearCanvas = () => {
   canvasData = [];
 };
 
-// clearButton.addEventListener('click', clearCanvas);
+clearButton.addEventListener('click', clearCanvas);
 
 
 // --------------------------------
