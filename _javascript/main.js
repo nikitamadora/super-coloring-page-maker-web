@@ -99,8 +99,8 @@ collectionButton.addEventListener('click', addToCollection);
 
 // --------- -=> Experimental Sandbox Funtimes <=- ---------
 let shapeChoice = 'square';
-const createSpiral = () => {
-  let numShapes = 10;
+const createSpiral = (rtn) => {
+  let numShapes = 15;
   let shapeWidth = 200;
   let shapeHeight = 200;
   let origin = 'center'
@@ -109,11 +109,11 @@ const createSpiral = () => {
     let shape = {
       id: i,
       type: shapeChoice,
-      x: 312.5,
-      y: 325,
+      x: 150,
+      y: 175,
       h: shapeHeight,
       w: shapeWidth,
-      rotation: i * 9,
+      rotation: i * rtn,
       origin: origin
     }
     // Adds `shape` object to array for both rendering shapes in canvas now, and exporting to db for later retrieval
@@ -126,4 +126,5 @@ const createSpiral = () => {
     canvas.appendChild(domShape);
   };
 };
-createSpiral();
+
+// createSpiral(3);
