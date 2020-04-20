@@ -78,6 +78,20 @@ $primary-invert: $pink-invert;
   text-align: right;
 }
 
+.super-button {
+  display: block;
+  min-width: 150px;
+  max-width: 250px;
+  width: 40%;
+  height: 50px;
+  line-height: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 12px;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.1);
+}
+
 .nav-button {
   -webkit-box-shadow: 5px 11px 18px -1px rgba(0,0,0,0.24);
   -moz-box-shadow: 5px 11px 18px -1px rgba(0,0,0,0.24);
