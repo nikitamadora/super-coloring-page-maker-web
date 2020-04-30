@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import router from './routes/views';
 
 const app = express();
-const PORT = 4001;
+const PORT = process.env.PORT || 4001;
 
 // -------------------
 //    Public Files
