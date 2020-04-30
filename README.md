@@ -9,21 +9,12 @@ http://www.supercoloringpagemaker.com/
 
 ### INSTALLATION
 
-#### Install Front-End
     - Clone this repo locally
     - npm install
     - npm start
     - Server will run on port 4001. Port can be changed in server.js if needed.
-    - If you've changed the port for the front-end, also change it in the back-end CORS settings, located in the back-end server.js file.
-    
-#### Install Back-End
-    - Clone the back-end repo from https://github.com/nikitamadora/super-coloring-page-maker-api
-    - npm install
-    - npm start
-    - Server will run on port 4000. Port can be changed in server.js if needed.
-    
-#### Open Browser, navigate to localhost:4001
-#### Enjoy!
+    - Open browser, navigate to localhost:4001
+    - Enjoy!
     
 <hr>
 
