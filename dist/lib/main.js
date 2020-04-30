@@ -29,8 +29,8 @@ var createCanvas = function createCanvas(e) {
       type: userShapeChoice,
       x: getRandomNum(-100, 500),
       y: getRandomNum(-100, 600),
-      h: getRandomNum(3, 750),
-      w: getRandomNum(3, 750)
+      h: getRandomNum(3, 350),
+      w: getRandomNum(3, 350)
       // Adds `shape` object to array for both rendering shapes in canvas now, and exporting to db for later retrieval
     };canvasData.push(shape);
 
@@ -84,7 +84,7 @@ var addToCollection = function addToCollection() {
       redirect: 'follow'
     };
 
-    fetch("http://localhost:4000/api/v1/artboard", postOptions).then(function (response) {
+    fetch("/api/v1/artboard", postOptions).then(function (response) {
       return response.json();
     }).then(function (result) {
       return console.log(result);

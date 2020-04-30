@@ -27,8 +27,8 @@ const createCanvas = (e) => {
       type: userShapeChoice,
       x: getRandomNum(-100, 500),
       y: getRandomNum(-100, 600),
-      h: getRandomNum(3, 750),
-      w: getRandomNum(3, 750)
+      h: getRandomNum(3, 350),
+      w: getRandomNum(3, 350)
     }
     // Adds `shape` object to array for both rendering shapes in canvas now, and exporting to db for later retrieval
     canvasData.push(shape);
@@ -84,7 +84,7 @@ const addToCollection = () => {
       redirect: 'follow'
     };
 
-    fetch("http://localhost:4000/api/v1/artboard", postOptions)
+    fetch("/api/v1/artboard", postOptions)
       .then(response => response.json())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
