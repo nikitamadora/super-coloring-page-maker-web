@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const API_BASE = '/api/v1';
   const artboardId = window.location.pathname.split('/')[2];
-  // console.log(artboardId);
   const canvas = document.querySelector('.canvas');
 
   const fetchData = () => {
-    fetch(`http://localhost:4000${API_BASE}/artboard/${artboardId}`)
+    fetch(`http://localhost:4001${API_BASE}/artboard/${artboardId}`)
       .then((stream) => stream.json())
       .then(res => recreateCanvas(res))
       .catch(error => console.log('error', error));
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const recreateCanvas = (canvasObj) => {
     let importedData = JSON.parse(canvasObj.canvasData);
     let numShapes = importedData.length;
-    console.log(importedData);
     
     for (let i = 0; i < numShapes; i++) {
       let shape = {

@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const API_BASE = '/api/v1/';
+  const API_BASE = '/api/v1';
   const galleryGrid = document.querySelector('#gallery-grid');
 
   const fetchData = () => {
-    fetch(`http://localhost:4000${API_BASE}/artboard/`)
+    fetch(`http://localhost:4001${API_BASE}/artboard/`)
       .then(stream => stream.json())
       .then(res => createGalleryItems(res))
       .catch(error => console.log('error', error));
