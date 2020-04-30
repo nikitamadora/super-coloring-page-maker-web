@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const canvas = document.querySelector('.canvas');
 
   const fetchData = () => {
-    fetch(`http://localhost:4001${API_BASE}/artboard/${artboardId}`)
+    fetch(`${API_BASE}/artboard/${artboardId}`)
       .then((stream) => stream.json())
       .then(res => recreateCanvas(res))
       .catch(error => console.log('error', error));

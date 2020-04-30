@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const galleryGrid = document.querySelector('#gallery-grid');
 
   const fetchData = () => {
-    fetch(`http://localhost:4001${API_BASE}/artboard/`)
+    fetch(`${API_BASE}/artboard/`)
       .then(stream => stream.json())
       .then(res => createGalleryItems(res))
       .catch(error => console.log('error', error));

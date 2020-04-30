@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 4001;
 //      Mongoose
 // -------------------
 mongoose.Promise = global.Promise; // We wait for a result when we connect to MongoDB
-mongoose.connect('mongodb://localhost/super-coloring-page-maker', {
+mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/super-coloring-page-maker', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
