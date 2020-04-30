@@ -2,7 +2,13 @@
 ## A Delightful Web App for Making Randomized Coloring Pages
 ### Version 1.0
 <hr>
+
+### APPLICATION WEBSITE
+
+http://www.supercoloringpagemaker.com/
+
 ### INSTALLATION
+
 #### Install Front-End
     - Clone this repo locally
     - npm install
@@ -20,8 +26,12 @@
 #### Enjoy!
     
 <hr>
+
 ### INTRODUCTION
-    Super Coloring Page Maker! is an interactive coloring page generator. Part code, part art, these mathematically generated coloring pages are intended to be created and used by people of all ages. 
+
+    Super Coloring Page Maker! is an interactive coloring page generator. 
+    Part code, part art, these mathematically generated coloring pages 
+    are intended to be created and used by people of all ages! 
 
 ### TECHNOLOGIES USED
     Super Coloring Page Maker! was developed using:
